@@ -10,8 +10,8 @@ const prefix = process.env.PREFIX || '!';
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-	let args = message.content.slice(prefix.length).trim().split(/\(([^)]+)\)/);
-	const command = args.shift().trim();
+    let args = message.content.slice(prefix.length).trim().split(/\(([^)]+)\)/);
+    const command = args.shift().trim();
     args = args[0].split(",");
     if (args.length != 2) {
         message.channel.send(`Comando inválido`);
@@ -20,7 +20,7 @@ client.on('message', message => {
     const param = args[0].trim();
     const region = args[1].trim();
 
-	if (command === 'info') {
+    if (command === 'info') {
         routes.getSummonerName(param, region).then(response => {
             if (response.status == 200) {
                 message.channel.send(`El id del invocador ${response.data.name} es ${response.data.id} y se encuentra en el nivel ${response.data.summonerLevel}`);
