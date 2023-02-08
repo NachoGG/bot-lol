@@ -4,7 +4,7 @@ Uso básico de Node.js para la creación de un bot de discord que utiliza la API
 
 ## Uso 
 
-Agregar al .env las siguientes configuraciones
+Agregar al env las siguientes configuraciones
 ```
 BOT_TOKEN = <token del bot de discord>
 RIOT_KEY = <key de Riot Games para desarrolladores> 
